@@ -26,9 +26,7 @@ const Intro1 = () => {
                     <h4 className="animated">
                       AI Review Emotional Analysis Visualization
                     </h4>
-                    <h2 className="animated fw-900">
-                      AI 리뷰 평점 분석 쇼핑몰
-                    </h2>
+                    <h2 className="animated fw-900">AI 리뷰 평점 분석</h2>
                     <h1 className="animated fw-900 text-brand">REAV</h1>
                     <p className="animated">권민재 / 김동환 / 최정대</p>
                     <Link href="/products/shop-grid-right">

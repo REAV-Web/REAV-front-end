@@ -15,21 +15,19 @@ function Custom404() {
               </p>
               <h2 className="mb-30">Page Not Found</h2>
               <p className="font-lg text-grey-700 mb-30">
-                The link you clicked may be broken or the page may have been
-                removed.
-                <br /> visit the
+                해당 링크에 접속할 수 없습니다.
+                <br />
                 <Link href="/">
                   <a>
                     <span> 홈페이지</span>
                   </a>
                 </Link>
-                or
+                /
                 <Link href="/page-contact">
                   <a>
                     <span>고객센터</span>
                   </a>
                 </Link>
-                about the problem
               </p>
               <form
                 className="contact-form-style text-center"

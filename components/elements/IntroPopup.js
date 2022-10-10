@@ -40,7 +40,7 @@ const IntroPopup = () => {
                 <div className="deal-content">
                   <h6 className="product-title">
                     <Link href="/products/shop-grid-right">
-                      <a>Summer Collection New Morden Design</a>
+                      <a>여름 시즌 모던 테마 신상품</a>
                     </Link>
                   </h6>
                   <div className="product-price">
@@ -57,15 +57,6 @@ const IntroPopup = () => {
                       Shop Now <i className="fi-rs-arrow-right"></i>
                     </a>
                   </Link>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="today-btn-close"
-                    onClick={handleRemove}
-                  >
-                    오늘 하루 그만 보기
-                  </button>
                 </div>
               </div>
             </div>

@@ -15,14 +15,18 @@ const ProductTab = () => {
   // 리뷰 데이터
   const [reviews, setReviews] = useState(["1", "2", "3"]);
 
+  /** 탭 변경 */
   const handleOnClick = (index) => {
     setActiveIndex(index);
   };
 
+  /** 리뷰 작성 */
   const handleSubmit = () => {
     console.log("name", name);
     console.log("email", email);
   };
+
+  console.log(reviews.length);
 
   return (
     <>
@@ -31,38 +35,38 @@ const ProductTab = () => {
           <li className="nav-item">
             <a
               className={activeIndex === 1 ? "nav-link active" : "nav-link"}
-              id="Description-tab"
+              id="Reviews-tab"
               data-bs-toggle="tab"
               onClick={() => handleOnClick(1)}
+            >
+              리뷰 ({reviews.length})
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
+              className={activeIndex === 2 ? "nav-link active" : "nav-link"}
+              id="Description-tab"
+              data-bs-toggle="tab"
+              onClick={() => handleOnClick(2)}
             >
               상품 설명
             </a>
           </li>
           <li className="nav-item">
             <a
-              className={activeIndex === 2 ? "nav-link active" : "nav-link"}
-              id="Additional-info-tab"
-              data-bs-toggle="tab"
-              onClick={() => handleOnClick(2)}
-            >
-              상세정보
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
               className={activeIndex === 3 ? "nav-link active" : "nav-link"}
-              id="Reviews-tab"
+              id="Additional-info-tab"
               data-bs-toggle="tab"
               onClick={() => handleOnClick(3)}
             >
-              리뷰 ({reviews.length})
+              상세정보
             </a>
           </li>
         </ul>
         <div className="tab-content shop_info_tab entry-main-content">
           <div
             className={
-              activeIndex === 1 ? "tab-pane fade show active" : "tab-pane fade"
+              activeIndex === 2 ? "tab-pane fade show active" : "tab-pane fade"
             }
             id="Description"
           >
@@ -132,7 +136,7 @@ const ProductTab = () => {
           </div>
           <div
             className={
-              activeIndex === 2 ? "tab-pane fade show active" : "tab-pane fade"
+              activeIndex === 3 ? "tab-pane fade show active" : "tab-pane fade"
             }
             id="Additional-info"
           >
@@ -227,7 +231,7 @@ const ProductTab = () => {
           </div>
           <div
             className={
-              activeIndex === 3 ? "tab-pane fade show active" : "tab-pane fade"
+              activeIndex === 1 ? "tab-pane fade show active" : "tab-pane fade"
             }
             id="Reviews"
           >
@@ -490,6 +494,9 @@ const ProductTab = () => {
                             cols="30"
                             rows="9"
                             placeholder="Write Comment"
+                            onChange={(e) => {
+                              setReviews(e.target.value);
+                            }}
                           ></textarea>
                         </div>
                       </div>

@@ -1,12 +1,12 @@
 [
   {
-    "title": "Colorful Pattern Shirts",
-    "slug": "colorful_pattern_shirts",
+    "title": "하와이안 티셔츠",
+    "slug": "하와이안 티셔츠",
     "moreLove": true,
     "id": "1",
     "price": 238.85,
     "oldPrice": 245.8,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "이 옷은 더울 때 입으면 진짜 시원합니다. 아름다운 색상에 귀여운 무늬들로 데코레이션 된 하와이안 티셔츠, 올 여름은 이 옷으로 충분합니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-1-1.jpg"
@@ -29,7 +29,7 @@
     ],
     "condition": "new",
     "color": "blue",
-    "brand": "armani",
+    "brand": "KU",
     "category": "clothing",
     "featured": false,
     "trending": true,
@@ -57,12 +57,12 @@
     "created": ""
   },
   {
-    "title": "Cartoon Astronaut T-Shirts",
-    "slug": "cartoon_astronaut_t-Shirts",
+    "title": "우주인 티셔츠",
+    "slug": "우주인 티셔츠",
     "moreLove": true,
     "id": "2",
     "price": 78,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "트렌디한 색상, 시원한 소재. 누구나 꿈꾸는 우주인 티셔츠, 올 여름은 이 옷으로 충분합니다. 길거리에서 당신을 뽐내보세요",
     "images": [
       {
         "img": "/assets/imgs/shop/product-2-1.jpg"
@@ -85,7 +85,7 @@
     ],
     "condition": "refurbished",
     "color": "blue",
-    "brand": "armani",
+    "brand": "KU",
     "category": "jeans",
     "featured": true,
     "trending": false,
@@ -112,12 +112,12 @@
     "created": "2021-02-03T06:48:07"
   },
   {
-    "title": "Plain Striola Shirts",
-    "slug": "plain_striola_shirts",
+    "title": "꽃무늬 셔츠",
+    "slug": "꽃무늬 셔츠",
     "moreLove": true,
     "id": "3",
     "price": 35,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "지금껏 꽃무늬 티셔츠가 촌스럽다고 생각해오셨나요? 이 꽃무늬 하와이안 티셔츠는 그런 당신의 생각을 바꿔줄 것입니다. 세련된 꽃무늬와 색상으로 여름을 더욱 시원하게 만들어줍니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-3-1.jpg"
@@ -140,7 +140,7 @@
     ],
     "condition": "new",
     "color": "blue",
-    "brand": "armani",
+    "brand": "KU",
     "category": "accessories",
     "featured": true,
     "trending": true,
@@ -167,12 +167,12 @@
     "created": ""
   },
   {
-    "title": "Landscape Painting Shirt",
-    "slug": "landscape_painting_shirt",
+    "title": "진짜 꽃무늬 티셔츠",
+    "slug": "진짜 꽃무늬 티셔츠",
     "moreLove": true,
     "id": "4",
     "price": 55,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "지금껏 꽃무늬 티셔츠가 촌스럽다고 생각해오셨나요? 이 꽃무늬 하와이안 티셔츠는 진짜 조금 촌스럽기는 해요. 그런데 뭐 어때요, 가끔은 복고풍의 매력을 느껴보는 것도 좋죠.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-4-1.jpg"
@@ -195,7 +195,7 @@
     ],
     "condition": "used",
     "color": "blue",
-    "brand": "armani",
+    "brand": "KU",
     "category": "trousers",
     "featured": true,
     "trending": false,
@@ -222,12 +222,12 @@
     "created": ""
   },
   {
-    "title": "Letter Print T-Shirt",
-    "slug": "letter_print_t-Shirt",
+    "title": "벚꽃무늬 티셔츠",
+    "slug": "벚꽃무늬 티셔츠",
     "moreLove": true,
     "id": "5",
     "price": 110,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "아름다운 벚꽃으로 뒤덮인 티셔츠입니다. 벚꽃이 피는 계절에는 벚꽃무늬 티셔츠를 입고 벚꽃을 보러 나가는 것도 좋은 방법입니다. 이 옷과 함께요!",
     "images": [
       {
         "img": "/assets/imgs/shop/product-5-1.jpg"
@@ -277,12 +277,12 @@
     "created": ""
   },
   {
-    "title": "Element Pattern Print Shirts",
-    "slug": "element_pattern_print_shirts",
+    "title": "낙화 그라데이션 티셔츠",
+    "slug": "낙화 그라데이션 티셔츠",
     "moreLove": true,
     "id": "6",
     "price": 150,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "꽃잎이 지고 있다는 것은, 그 꽃이 더 이상 피지 않을 것이라는 것을 의미합니다. 그러나 이 티셔츠는 꽃이 더 이상 피지 않을 것이라는 것을 의미하지 않습니다. 그저 그 꽃이 피었던 시간을 기억하고 있을 뿐입니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-6-1.jpg"
@@ -332,11 +332,11 @@
     "created": ""
   },
   {
-    "title": "Vintage Shirt",
+    "title": "빈티지 신발",
     "moreLove": true,
     "id": "7",
     "price": 98,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "지금 혹시 빈티지라고 비웃으셨나요? 그렇다면 더더욱 이 신발을 구매해보세요. 당신도 모르는 사이에 빈티지와 사랑에 빠질지도 모릅니다. 빈티지는 그런 것이니까요.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-7-1.jpg"
@@ -386,12 +386,12 @@
     "created": ""
   },
   {
-    "title": "Henley Shirt",
-    "slug": "henley_shirt",
+    "title": "복고풍 반반 셔츠",
+    "slug": "복고풍 반반 셔츠",
     "moreLove": true,
     "id": "8",
     "price": 24,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "이 옷은 주황색과 파랑색이 반반 나뉘어져 있습니다. 왜그런지 아세요? 그렇게 하면 당신이 더 멋있어 보일 수 있기 때문이에요",
     "images": [
       {
         "img": "/assets/imgs/shop/product-8-1.jpg"
@@ -441,12 +441,12 @@
     "created": ""
   },
   {
-    "title": "Cotton Leaf Printed",
-    "slug": "cotton_leaf_printed",
+    "title": "코튼 런닝화",
+    "slug": "코튼 런닝화",
     "moreLove": true,
     "id": "9",
     "price": 146,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "심플하면서도 고급진 런닝화입니다. 원래 삶이 그렇죠, 때로는 더하기보다는 빼기가 무언가를 가치있게 만들기도 하는 법입니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-9-1.jpg"
@@ -496,12 +496,12 @@
     "created": ""
   },
   {
-    "title": "Chen Cardigan",
-    "slug": "chen_cardigan",
+    "title": "골목길 꽃 한송이 바지",
+    "slug": "골목길 꽃 한송이 바지",
     "moreLove": true,
     "id": "10",
     "price": 67,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "이 바지에 그려진 꽃들은 마치 골목길 전봇대 밑에서 피어나는 꽃들처럼 자연스럽고 아름답습니다. 이처럼 때로는 어울리지 않을 것 같은 장소에 존재하면서 더욱 빛을 발할 때가 있죠, 이 바지가 그 아름다움을 증명할 것입니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-10-1.jpg"
@@ -551,12 +551,12 @@
     "created": ""
   },
   {
-    "title": "Chen Sweater",
-    "slug": "chen_sweater",
+    "title": "기묘한 고양이 블라우스",
+    "slug": "기묘한 고양이 블라우스",
     "moreLove": true,
     "id": "11",
     "price": 116,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "이 블라우스를 구매하시면 당신은 기묘한 고양이들을 마주칠 것입니다. 너무 자세히 들여다보지 마세요, 당신이 기묘하다고 생각할 때 그 블라우스는 더욱 더 빛이 나니깐요.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-11-1.jpg"
@@ -606,12 +606,12 @@
     "created": ""
   },
   {
-    "title": "Colorful Jacket",
-    "slug": "colorful_jacket",
+    "title": "컬러풀 바지",
+    "slug": "컬러풀 바지",
     "moreLove": true,
     "id": "12",
     "price": 73,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "혹시 주변의 관심과 시선을 한번에 끌고 싶으신가요? 아마 이정도 화려함이면 충분할 것이라 생각합니다. 이 바지는 이 바지를 입은 날이 언제든 당신을 특별하게 만들어줄 것입니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-12-1.jpg"
@@ -661,13 +661,13 @@
     "created": ""
   },
   {
-    "title": "Mens Porcelain Shirt",
-    "slug": "mens_porcelain_shirt",
+    "title": "반 꽃무늬 셔츠",
+    "slug": "반 꽃무늬 셔츠",
     "moreLove": true,
     "id": "13",
     "price": 238.85,
     "oldPrice": 245.8,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "이 셔츠의 꽃무늬는 착용자의 심장 위치로부터 퍼져나가고 있습니다. 그러니까, 이 셔츠는 당신의 뜨거운 심장을 표현할 때 더 좋은 선택이 될 것입니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-13-1.jpg"
@@ -718,13 +718,13 @@
     "created": ""
   },
   {
-    "title": "Ethnic Floral Casual Shirts",
-    "slug": "ethnic_floral_casual_shirts",
+    "title": "풀색 핸드백",
+    "slug": "풀색 핸드백",
     "moreLove": true,
     "id": "14",
     "price": 238.85,
     "oldPrice": 245.8,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "눈에 가장 편한 색 풀색을 아시나요? 풀색으로 디자인 된 이 핸드백은 당신과 모두의 눈을 편안하게 해줄 것입니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-14-1.jpg"
@@ -775,13 +775,13 @@
     "created": ""
   },
   {
-    "title": "Flowers Sleeve Lapel Shirt",
-    "slug": "flowers_sleeve_lapel_shirt",
+    "title": "꽃무늬 벙거지 모자",
+    "slug": "꽃무늬 벙거지 모자",
     "moreLove": true,
     "id": "15",
     "price": 238.85,
     "oldPrice": 245.8,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "왠지 모르게, 이 모자만 쓰면 비트를 타게 돼요. 모자만 착용해도 당신을 굉장히 힙한 래퍼처럼 보이게 할 수 있습니다.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-15-1.jpg"
@@ -832,13 +832,13 @@
     "created": ""
   },
   {
-    "title": "Maecenas eget",
-    "slug": "maecenas_eget",
+    "title": "우산 무늬 티셔츠",
+    "slug": "우산 무늬 티셔츠",
     "moreLove": true,
     "id": "16",
     "price": 238.85,
     "oldPrice": 245.8,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+    "desc": "요즘 비가 많이 오는데, 이 티셔츠를 입으면 비가 올 때마다 우산을 쓰는 느낌을 받을 수 있습니다. 물론 방수가 아니기 때문에 비를 막아주지는 않습니다. 비가 올 때는 이 옷과 함께 우산을 꼭 챙기세요.",
     "images": [
       {
         "img": "/assets/imgs/shop/product-1-1.jpg"

@@ -18,6 +18,7 @@
     "react-bootstrap": "^2.4.0",
     "react-content-loader": "^6.2.0",
     "react-dom": "18.1.0",
+    "react-icons": "^4.6.0",
     "react-img-zoom": "^0.1.0",
     "react-perfect-scrollbar": "^1.5.8",
     "react-redux": "^8.0.2",
@@ -30,6 +31,7 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
     "select2": "^4.1.0-rc.0",
+    "styled-components": "^5.3.6",
     "swiper": "^8.2.2",
     "wowjs": "^1.1.3"
   }

@@ -12,7 +12,7 @@ const Banner2 = () => {
             AI Review Analysis Services
           </h4>
           <h1 className="fw-600 mb-20">
-            우리는 AI로 <br />
+            우리는 AI를 이용해 <br />
             당신에게 객관적인 리뷰를 제공합니다.
           </h1>
 

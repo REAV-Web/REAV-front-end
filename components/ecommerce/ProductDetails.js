@@ -151,16 +151,16 @@ const ProductDetails = ({
                       <div className="product_sort_info font-xs mb-30">
                         <ul>
                           <li className="mb-10">
-                            <i className="fi-rs-crown mr-5"></i>1 Year AL
-                            Jazeera Brand Warranty
+                            <i className="fi-rs-crown mr-5"></i>1년간 REAV
+                            소비자 보증
                           </li>
                           <li className="mb-10">
                             <i className="fi-rs-refresh mr-5"></i>
-                            30 Day Return Policy
+                            30일 내 환불 가능
                           </li>
                           <li>
                             <i className="fi-rs-credit-card mr-5"></i>
-                            Cash on Delivery available
+                            언제든지 배송 가능
                           </li>
                         </ul>
                       </div>

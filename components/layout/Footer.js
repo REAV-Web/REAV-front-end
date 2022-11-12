@@ -17,13 +17,13 @@ const Footer = () => {
                       alt=""
                     />
                     <h4 className="font-size-20 mb-0 ml-3">
-                      Sign up to Newsletter
+                      이메일로 정보를 받아보세요.
                     </h4>
                   </div>
                   <div className="col my-4 my-md-0 des">
                     <h5 className="font-size-15 ml-4 mb-0">
-                      ...and receive
-                      <strong>$25 coupon for first shopping.</strong>
+                      그리고 매달
+                      <strong> 2만원 상당의 쿠폰을 받아보세요!</strong>
                     </h5>
                   </div>
                 </div>
@@ -33,10 +33,10 @@ const Footer = () => {
                   <input
                     type="email"
                     className="form-control bg-white font-small"
-                    placeholder="Enter your email"
+                    placeholder="이메일을 입력해주세요"
                   />
                   <button className="btn bg-dark text-white" type="submit">
-                    Subscribe
+                    이메일 구독
                   </button>
                 </form>
               </div>

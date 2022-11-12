@@ -33,7 +33,7 @@ const Deals2 = () => {
           <Timer endDateTime={fixDate.setDate(fixDate.getDate() + 2)} />
           <Link href="/products/shop-grid-right">
             <a className="btn hover-up">
-              Shop Now <i className="fi-rs-arrow-right"></i>
+              지금 보러가기 <i className="fi-rs-arrow-right"></i>
             </a>
           </Link>
         </div>

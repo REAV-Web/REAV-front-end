@@ -72,7 +72,7 @@ function FeatchTab() {
         <h6>
           <Link href="/products/shop-grid-right">
             <a className="view-more d-none d-md-flex">
-              View More<i className="fi-rs-angle-double-small-right"></i>
+              더보기<i className="fi-rs-angle-double-small-right"></i>
             </a>
           </Link>
         </h6>

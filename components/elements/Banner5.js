@@ -14,7 +14,7 @@ const Banner5 = () => {
             </h4>
             <Link href="/products">
               <a>
-                Shop Now <i className="fi-rs-arrow-right"></i>
+                지금 보러가기 <i className="fi-rs-arrow-right"></i>
               </a>
             </Link>
           </div>
@@ -31,7 +31,7 @@ const Banner5 = () => {
             </h4>
             <Link href="/products">
               <a>
-                Shop Now <i className="fi-rs-arrow-right"></i>
+                지금 보러가기 <i className="fi-rs-arrow-right"></i>
               </a>
             </Link>
           </div>
@@ -48,7 +48,7 @@ const Banner5 = () => {
             </h4>
             <Link href="/products">
               <a>
-                Shop Now <i className="fi-rs-arrow-right"></i>
+                지금 보러가기 <i className="fi-rs-arrow-right"></i>
               </a>
             </Link>
           </div>

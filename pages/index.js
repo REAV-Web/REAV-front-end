@@ -97,50 +97,13 @@ export default function Home() {
         <section className="section-padding">
           <div className="container">
             <h3 className="section-title mb-20 wow fadeIn animated">
-              <span>Featured</span> Brands
+              <span>파트너</span> 브랜드
             </h3>
             <div className="carausel-6-columns-cover position-relative wow fadeIn animated">
               <BrandSlider />
             </div>
           </div>
         </section>
-
-        <section className="bg-grey-9 section-padding">
-          <div className="container pt-25 pb-25">
-            <FeatchTab2 />
-          </div>
-        </section>
-
-        <section className="section-padding">
-          <div className="container pt-25 pb-20">
-            <div className="row">
-              <div className="col-lg-6">
-                <h3 className="section-title mb-20">
-                  <span>From</span> blog
-                </h3>
-                <HomeBlog />
-              </div>
-              <div className="col-lg-6">
-                <div className="row">
-                  <Banner3 />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-50">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <Banner4 />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <Bottom />
-
         <QuickView />
       </Layout>
     </>

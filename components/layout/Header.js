@@ -833,217 +833,15 @@ const Header = ({
                           <a>Shop</a>
                         </Link>
                       </li>
-                      <li className="position-static">
-                        <Link href="/#">
-                          <a>
-                            Mega menu
-                            <i className="fi-rs-angle-down"></i>
-                          </a>
-                        </Link>
-                        <ul className="mega-menu">
-                          <li className="sub-mega-menu sub-mega-menu-width-22">
-                            <Link href="/#">
-                              <a className="menu-title">Women's Fashion</a>
-                            </Link>
-                            <ul>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Dresses</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Blouses & Shirts</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Hoodies & Sweatshirts</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Wedding Dresses</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Prom Dresses</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Cosplay Costumes</a>
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className="sub-mega-menu sub-mega-menu-width-22">
-                            <Link href="/#">
-                              <a className="menu-title">Men's Fashion</a>
-                            </Link>
-                            <ul>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Jackets</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Casual Faux Leather</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Genuine Leather</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Casual Pants</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Sweatpants</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Harem Pants</a>
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className="sub-mega-menu sub-mega-menu-width-22">
-                            <Link href="/#">
-                              <a className="menu-title">Technology</a>
-                            </Link>
-                            <ul>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Gaming Laptops</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Ultraslim Laptops</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Tablets</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Laptop Accessories</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/products/shop-grid-right">
-                                  <a>Tablet Accessories</a>
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className="sub-mega-menu sub-mega-menu-width-34">
-                            <div className="menu-banner-wrap">
-                              <Link href="/products/shop-grid-right">
-                                <a>
-                                  <img
-                                    src="/assets/imgs/banner/menu-banner.jpg"
-                                    alt="Evara"
-                                  />
-                                </a>
-                              </Link>
-                              <div className="menu-banner-content">
-                                <h4>Hot deals</h4>
-                                <h3>
-                                  Don't miss
-                                  <br />
-                                  Trending
-                                </h3>
-                                <div className="menu-banner-price">
-                                  <span className="new-price text-success">
-                                    Save to 50%
-                                  </span>
-                                </div>
-                                <div className="menu-banner-btn">
-                                  <Link href="/products/shop-grid-right">
-                                    <a>Shop now</a>
-                                  </Link>
-                                </div>
-                              </div>
-                              <div className="menu-banner-discount">
-                                <h3>
-                                  <span>35%</span>
-                                  off
-                                </h3>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
                       <li>
-                        <Link href="/blog-category-grid">
-                          <a>
-                            Blog
-                            <i className="fi-rs-angle-down"></i>
-                          </a>
+                        <Link href="https://github.com/REAV-Web/REAV-front-end">
+                          <a>Github</a>
                         </Link>
-                        <ul className="sub-menu">
-                          <li>
-                            <Link href="/blog-category-grid">
-                              <a>Blog Category Grid</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/blog-category-list">
-                              <a>Blog Category List</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/blog-category-big">
-                              <a>Blog Category Big</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/blog-category-fullwidth">
-                              <a>Blog Category Wide</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/#">
-                              <a>
-                                Single Post
-                                <i className="fi-rs-angle-right"></i>
-                              </a>
-                            </Link>
-                            <ul className="level-menu level-menu-modify">
-                              <li>
-                                <Link href="/blog-post-left">
-                                  <a>Left Sidebar</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/blog-post-right">
-                                  <a>Right Sidebar</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="/blog-post-fullwidth">
-                                  <a>No Sidebar</a>
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
                       </li>
                       <li>
                         <Link href="/#">
                           <a>
-                            Pages
+                            Help
                             <i className="fi-rs-angle-down"></i>
                           </a>
                         </Link>
@@ -1051,21 +849,6 @@ const Header = ({
                           <li>
                             <Link href="/page-about">
                               <a>About Us</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/page-contact">
-                              <a>Contact</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/page-account">
-                              <a>My Account</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/page-login-register">
-                              <a>login/register</a>
                             </Link>
                           </li>
                           <li>
@@ -1081,11 +864,6 @@ const Header = ({
                           <li>
                             <Link href="/page-terms">
                               <a>Terms of Service</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/page-404">
-                              <a>404 Page</a>
                             </Link>
                           </li>
                         </ul>

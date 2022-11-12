@@ -2,7 +2,7 @@ const BannerFeatures = () => {
   var data = [
     {
       id: 1,
-      title: "자유 쇼핑",
+      title: "자유로운 쇼핑",
       img: "feature-2.png",
       color: "bg-1",
     },
@@ -14,19 +14,19 @@ const BannerFeatures = () => {
     },
     {
       id: 3,
-      title: "돈 절약",
+      title: "가벼운 지갑",
       img: "feature-3.png",
       color: "bg-3",
     },
     {
       id: 4,
-      title: "프로모션",
+      title: "다양한 프로모션",
       img: "feature-4.png",
       color: "bg-4",
     },
     {
       id: 5,
-      title: "행복 쇼핑",
+      title: "행복한 쇼핑",
       img: "feature-5.png",
       color: "bg-5",
     },

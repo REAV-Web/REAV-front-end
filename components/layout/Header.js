@@ -817,23 +817,8 @@ const Header = ({
                         </Link>
                         <ul className="sub-menu">
                           <li>
-                            <Link href="/">
+                            <Link href="https://mixolydian-noodle-3cc.notion.site/REAV-4ce219e299be460c8fc162c3adba0eb8">
                               <a>프로젝트 개요</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/index-2">
-                              <a>Home 2</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/index-3">
-                              <a>Home 3</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/index-4">
-                              <a>Home 4</a>
                             </Link>
                           </li>
                         </ul>
@@ -845,63 +830,8 @@ const Header = ({
                       </li>
                       <li>
                         <Link href="/products/shop-grid-right">
-                          <a>
-                            Shop
-                            <i className="fi-rs-angle-down"></i>
-                          </a>
+                          <a>Shop</a>
                         </Link>
-                        <ul className="sub-menu">
-                          <li>
-                            <Link href="/products/shop-grid-right">
-                              <a>Shop Grid – Right Sidebar</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/products/">
-                              <a>Shop Grid – Left Sidebar</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/products/shop-list-right">
-                              <a>Shop List – Right Sidebar</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/products/shop-list-left">
-                              <a>Shop List – Left Sidebar</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/products/shop-fullwidth">
-                              <a>Shop - Wide</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/products/shop-filter">
-                              <a>Shop - Filter</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/shop-wishlist">
-                              <a>Shop – Wishlist</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/shop-cart">
-                              <a>Shop – Cart</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/shop-checkout">
-                              <a>Shop – Checkout</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/shop-compare">
-                              <a>Shop – Compare</a>
-                            </Link>
-                          </li>
-                        </ul>
                       </li>
                       <li className="position-static">
                         <Link href="/#">

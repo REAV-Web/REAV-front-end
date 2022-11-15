@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
 // import RatingSection
 import RatingSection from "./RatingSection";
+import axios from "axios";
 
-const ProductTab = () => {
+const ProductTab = (productId) => {
   const [activeIndex, setActiveIndex] = useState(1);
 
   // 리뷰자 데이터
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  // 리뷰 내용
+  const [reviewContent, setReviewContent] = useState("");
+
   // ratingIndex = 받을 평점
   const [ratingIndex, setRatingIndex] = useState(1);
 
-  // 리뷰 데이터
-  const [reviews, setReviews] = useState(["1", "2", "3"]);
+  // 리뷰 목록 데이터
+  const [reviews, setReviews] = useState([]);
 
   /** 탭 변경 */
   const handleOnClick = (index) => {
@@ -22,11 +26,40 @@ const ProductTab = () => {
 
   /** 리뷰 작성 */
   const handleSubmit = () => {
+    console.log(productId, name, email, reviewContent, ratingIndex);
+    // null input secure code
+    if (name === "" || email === "" || reviewContent === "") {
+      alert("모든 항목을 입력해주세요.");
+      return;
+    }
+
+    const reviewData = {
+      itemID: { productId },
+      user: { name },
+      email: { email },
+      review: { reviewContent },
+      rating: { ratingIndex },
+    };
+
+    fetch(
+      "http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/review",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(reviewData),
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("리뷰 등록 완료", res);
+      })
+      .console.error("리뷰 등록 실패");
+
     console.log("name", name);
     console.log("email", email);
   };
-
-  console.log(reviews.length);
 
   return (
     <>
@@ -495,7 +528,7 @@ const ProductTab = () => {
                             rows="9"
                             placeholder="Write Comment"
                             onChange={(e) => {
-                              setReviews(e.target.value);
+                              setReviewContent(e.target.value);
                             }}
                           ></textarea>
                         </div>

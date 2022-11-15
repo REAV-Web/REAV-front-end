@@ -282,7 +282,7 @@ const ProductDetails = ({
 
                 {quickView ? null : (
                   <>
-                    <ProductTab />
+                    <ProductTab productId={product.id} />
                     <div className="row mt-60">
                       <div className="col-12">
                         <h3 className="section-title style-1 mb-30">

@@ -105,65 +105,68 @@ const ProductTab = (productId) => {
           >
             <div className="">
               <p>
-                Uninhibited carnally hired played in whimpered dear gorilla
-                koala depending and much yikes off far quetzal goodness and from
-                for grimaced goodness unaccountably and meadowlark near
-                unblushingly crucial scallop tightly neurotic hungrily some and
-                dear furiously this apart.
+                "S/S 시즌 필수 아이템", 하와이안 셔츠는 셔츠의 한 종류로 알로하
+                셔츠(Aloha shirt)라고도 불린다. 이름에서 알 수 있듯 하와이와
+                남쪽 나라스러운 배경에 어울리는 밝은 분위기의 화려한 셔츠이다.
+                큼지막한 꽃문양이나 식물 문양(야자수 등)을 화려하고 커다랗게
+                가득히 프린트해 주는 것이 포인트이자 사실 거의 유일한 요건이며
+                셔츠류임에도 바깥으로 내어 입는 것도 특징. 보통 실제 사이즈보다
+                넉넉하게 입으며 남쪽으로 휴가나 관광을 가면 하와이안 셔츠를 입고
+                찍은 사진으로 '나 관광 왔음'을 인증하게 된다.
               </p>
               <p>
-                Spluttered narrowly yikes left moth in yikes bowed this that
-                grizzly much hello on spoon-fed that alas rethought much
-                decently richly and wow against the frequent fluidly at
-                formidable acceptably flapped besides and much circa far over
-                the bucolically hey precarious goldfinch mastodon goodness
-                gnashed a jellyfish and one however because.
+                하와이 거주인들에게 알로하 셔츠는 공적 자리에서 입을 수 있는
+                정장으로 인식되며, 따라서 알로하 셔츠에 면바지를 입고 구두를
+                신으면 고급 레스토랑 및 공식 석상에 무난한 옷차림이다. 바지는
+                아무거나 걸쳐 입어도 하와이 내에서는 뭘 입을지 고민을 안 해도 될
+                정도로 한 방에 해결해주는 옷. 다만, 하와이 거주자들이 입는
+                알로하 셔츠의 무늬는 맨 위의 화려한 사진과는 많이 다르며,
+                색상이나 디자인이 튀지 않는 아래 사진과 같은 평범한 셔츠를
+                입는다. 직장인으로서 알로하 셔츠를 정장으로 입을 수 없는 직업은
+                딱 2가지가 있는데, 하나는 변호사·검사이며 다른 하나는 명품 매장
+                문 앞에서 일하는 시큐리티 가드뿐이다. 대부분의 공무원은 알로하
+                셔츠를 입는다.
               </p>
               <ul className="product-more-infor mt-30">
                 <li>
-                  <span>Type Of Packing</span> Bottle
+                  <span>배송방법</span> 택배
                 </li>
                 <li>
-                  <span>Color</span> Green, Pink, Powder Blue, Purple
+                  <span>색상</span> Green, Pink, Powder Blue, Purple
                 </li>
                 <li>
-                  <span>Quantity Per Case</span> 100ml
+                  <span>상품무게</span> 700g
                 </li>
                 <li>
-                  <span>Ethyl Alcohol</span> 70%
+                  <span>폴리에스터</span> 99%
                 </li>
                 <li>
-                  <span>Piece In One</span> Carton
+                  <span>제조국</span> Korea
                 </li>
               </ul>
               <hr className="wp-block-separator is-style-dots" />
               <p>
-                Laconic overheard dear woodchuck wow this outrageously taut
-                beaver hey hello far meadowlark imitatively egregiously hugged
-                that yikes minimally unanimous pouted flirtatiously as beaver
-                beheld above forward energetic across this jeepers beneficently
-                cockily less a the raucously that magic upheld far so the this
-                where crud then below after jeez enchanting drunkenly more much
-                wow callously irrespective limpet.
+                시원하고 트렌디한 반팔셔츠, 댄디 & 캐주얼 코디에 잘 어울리며
+                따로 셔츠만 착용하여도 스타일리쉬한 코디를 연출할 수 있어요!
               </p>
-              <h4 className="mt-30">Packaging & Delivery</h4>
+              <h4 className="mt-30">포장 & 배송</h4>
               <hr className="wp-block-separator is-style-wide" />
               <p>
-                Less lion goodness that euphemistically robin expeditiously
-                bluebird smugly scratched far while thus cackled sheepishly
-                rigid after due one assenting regarding censorious while
-                occasional or this more crane went more as this less much amid
-                overhung anathematic because much held one exuberantly sheep
-                goodness so where rat wry well concomitantly.
-              </p>
-              <p>
-                Scallop or far crud plain remarkably far by thus far iguana lewd
-                precociously and and less rattlesnake contrary caustic wow this
-                near alas and next and pled the yikes articulate about as less
-                cackled dalmatian in much less well jeering for the thanks
-                blindly sentimental whimpered less across objectively fanciful
-                grimaced wildly some wow and rose jeepers outgrew lugubrious
-                luridly irrationally attractively dachshund.
+                - 배송일정은 수도권 평균 1~5일, 그 외 지역 평균 6~10일 소요
+                됩니다.
+                <br />- 수도권 기준, 일요일 / 공휴일 / 매월 1일 배송이
+                불가능합니다. <br />
+                &nbsp;&nbsp;수도권 외 지역 기준, 일요일 / 공휴일 / 매월 2일
+                배송이 불가능합니다. <br />
+                - 일시적 재고 부족이나 기상이변으로 배송 지연이 발생할 수
+                있습니다.
+                <br />
+                - 택배 배송되는 일부 상품은 별도 안내 없이 송장을 통한
+                배송조회가 가능합니다.
+                <br />
+                - 일부 지역은 상품에 따라 배송 예정일과 시간이 상이할 수
+                있습니다.
+                <br />
               </p>
             </div>
           </div>
@@ -176,7 +179,7 @@ const ProductTab = (productId) => {
             <table className="font-md">
               <tbody>
                 <tr className="stand-up">
-                  <th>Stand Up</th>
+                  <th>총 기장</th>
                   <td>
                     <p>35″L x 24″W x 37-45″H(front to back wheel)</p>
                   </td>

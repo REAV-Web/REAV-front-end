@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import RatingSection
 import RatingSection from "./RatingSection";
 import axios from "axios";
 
@@ -555,7 +554,7 @@ const ProductTab = (productId) => {
                             }}
                           ></textarea>
                         </div>
-                        <text
+                        <div
                           className="limit_text"
                           style={
                             reviewContent.length >= MAX_LENGTH
@@ -564,7 +563,7 @@ const ProductTab = (productId) => {
                           }
                         >
                           ( {reviewContent.length} / {MAX_LENGTH} )
-                        </text>
+                        </div>
                       </div>
                     </div>
                     <div className="form-group">

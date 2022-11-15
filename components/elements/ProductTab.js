@@ -20,6 +20,33 @@ const ProductTab = (productId) => {
 
   // 최대 글자수
   const MAX_LENGTH = 150;
+
+  useEffect(() => {
+    //리뷰 데이터 가져오기
+    // fetch(
+    //   "http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/review",
+    //   {
+    //     method: "GET",
+    //   }
+    // )
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     console.log("review Data: ", res);
+    //     setReviews(res);
+    //   });
+    // fetch(
+    //   "http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/weight",
+    //   {
+    //     method: "GET",
+    //   }
+    // )
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     console.log("review Data: ", res);
+    //     setReviews(res);
+    //   });
+  }, []);
+
   /** 탭 변경 */
   const handleOnClick = (index) => {
     setActiveIndex(index);

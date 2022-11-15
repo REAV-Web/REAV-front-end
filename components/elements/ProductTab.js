@@ -382,7 +382,20 @@ const ProductTab = (productId) => {
                   </div>
                 </div>
                 <div className="col-lg-4">
-                  <h4 className="mb-30">Customer reviews</h4>
+                  <h4 className="mb-20">AI Analysis📡</h4>
+                  <div className="d-flex mb-80">
+                    <div className="product-rate d-inline-block mr-15">
+                      <div
+                        className="product-rating"
+                        style={{
+                          width: "90%",
+                        }}
+                      ></div>
+                    </div>
+                    <h6>4.8 out of 5</h6>
+                  </div>
+
+                  <h4 className="mb-20">Customer reviews</h4>
                   <div className="d-flex mb-30">
                     <div className="product-rate d-inline-block mr-15">
                       <div
@@ -469,9 +482,6 @@ const ProductTab = (productId) => {
                       85%
                     </div>
                   </div>
-                  <a href="#" className="font-xs text-muted">
-                    How are ratings calculated?
-                  </a>
                 </div>
               </div>
             </div>

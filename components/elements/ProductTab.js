@@ -19,6 +19,8 @@ const ProductTab = (productId) => {
   // 리뷰 목록 데이터
   const [reviews, setReviews] = useState([]);
 
+  // 최대 글자수
+  const MAX_LENGTH = 150;
   /** 탭 변경 */
   const handleOnClick = (index) => {
     setActiveIndex(index);
@@ -531,8 +533,8 @@ const ProductTab = (productId) => {
                           />
                         </div>
                       </div>
-                      <div className="col-12">
-                        <div className="form-group">
+                      <div className="col-12 mb-20">
+                        <div className="form-group mb-5">
                           <textarea
                             className="form-control w-100"
                             name="comment"
@@ -541,10 +543,28 @@ const ProductTab = (productId) => {
                             rows="9"
                             placeholder="Write Comment"
                             onChange={(e) => {
+                              if (e.target.value.length > MAX_LENGTH) {
+                                // alert("최대 150자까지 입력 가능합니다.");
+                                e.target.value = e.target.value.slice(
+                                  0,
+                                  MAX_LENGTH
+                                );
+                                return;
+                              }
                               setReviewContent(e.target.value);
                             }}
                           ></textarea>
                         </div>
+                        <text
+                          className="limit_text"
+                          style={
+                            reviewContent.length >= MAX_LENGTH
+                              ? { color: "#ff596d" }
+                              : undefined
+                          }
+                        >
+                          ( {reviewContent.length} / {MAX_LENGTH} )
+                        </text>
                       </div>
                     </div>
                     <div className="form-group">

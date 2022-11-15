@@ -73,13 +73,13 @@ function Login() {
                     <div className="login_wrap widget-taber-content p-30 background-white border-radius-5">
                       <div className="padding_eight_all bg-white">
                         <div className="heading_s1">
-                          <h3 className="mb-30">Create an Account</h3>
+                          <h3 className="mb-20">Create an Account</h3>
                         </div>
-                        <p className="mb-50 font-sm">
-                          Your personal data will be used to support your
-                          experience throughout this website, to manage access
-                          to your account, and for other purposes described in
-                          our privacy policy
+                        <p className="mb-30 font-sm">
+                          사용자의 개인 데이터는 이 웹 사이트 전체에서 사용자의
+                          경험을 지원하고, 계정에 대한 액세스를 관리하는 데
+                          사용되며, 개인 정보 보호 정책에 설명된 다른 용도로
+                          사용됩니다.
                         </p>
                         <form method="post">
                           <div className="form-group">
@@ -128,7 +128,8 @@ function Login() {
                                   className="form-check-label"
                                   htmlFor="exampleCheckbox12"
                                 >
-                                  <span>I agree to terms &amp; Policy.</span>
+                                  <span>저는 &amp; 개인정보 보호 정책</span>을
+                                  읽었고 동의합니다.
                                 </label>
                               </div>
                             </div>
@@ -145,7 +146,7 @@ function Login() {
                               className="btn btn-fill-out btn-block hover-up"
                               name="login"
                             >
-                              Submit &amp; Register
+                              &amp; 회원가입
                             </button>
                           </div>
                         </form>

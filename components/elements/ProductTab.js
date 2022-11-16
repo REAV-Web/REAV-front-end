@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import RatingSection from "./RatingSection";
 import axios from "axios";
 
-const ProductTab = (productId) => {
+const ProductTab = (props) => {
   const [activeIndex, setActiveIndex] = useState(1);
 
   // 리뷰자 데이터
@@ -14,6 +14,7 @@ const ProductTab = (productId) => {
 
   // ratingIndex = 받을 평점
   const [ratingIndex, setRatingIndex] = useState(1);
+  const [aiRating, setAiRating] = useState(0);
 
   // 리뷰 목록 데이터
   const [reviews, setReviews] = useState([]);
@@ -21,30 +22,45 @@ const ProductTab = (productId) => {
   // 최대 글자수
   const MAX_LENGTH = 150;
 
+  let ratingList = [0, 0, 0, 0, 0];
+  let sumRating = 0;
+
+  let productID = -1;
+
+  const fetchReviews = async () => {
+    fetch(
+      `http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/review/${productID}`,
+      {
+        method: "GET",
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("review Data: ", res);
+        setReviews(res);
+      });
+  };
+
+  const fetchWeight = async () => {
+    fetch(
+      `http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/weight/${productID}`,
+      {
+        method: "GET",
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("weight Data: ", res);
+        console.log("상품 ID", props);
+        setAiRating(res);
+      });
+  };
+
   useEffect(() => {
     //리뷰 데이터 가져오기
-    // fetch(
-    //   "http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/review",
-    //   {
-    //     method: "GET",
-    //   }
-    // )
-    //   .then((res) => res.json())
-    //   .then((res) => {
-    //     console.log("review Data: ", res);
-    //     setReviews(res);
-    //   });
-    // fetch(
-    //   "http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/weight",
-    //   {
-    //     method: "GET",
-    //   }
-    // )
-    //   .then((res) => res.json())
-    //   .then((res) => {
-    //     console.log("review Data: ", res);
-    //     setReviews(res);
-    //   });
+    fetchReviews();
+    fetchWeight();
+    productID = parseInt(props.productID);
   }, []);
 
   /** 탭 변경 */
@@ -54,40 +70,71 @@ const ProductTab = (productId) => {
 
   /** 리뷰 작성 */
   const handleSubmit = () => {
-    console.log(productId, name, email, reviewContent, ratingIndex);
     // null input secure code
     if (name === "" || email === "" || reviewContent === "") {
       alert("모든 항목을 입력해주세요.");
       return;
     }
 
-    const reviewData = {
-      itemID: { productId },
-      user: { name },
-      email: { email },
-      review: { reviewContent },
-      rating: { ratingIndex },
-    };
+    console.log("@@@@", name, email, reviewContent, ratingIndex);
 
-    fetch(
-      "http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/review",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(reviewData),
-      }
-    )
-      .then((res) => res.json())
+    axios
+      .post(
+        `http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/review/${productID}?user=${name}&email=${email}&review=${reviewContent}&rating=${ratingIndex}`
+      )
       .then((res) => {
+        console.log(res);
         console.log("리뷰 등록 완료", res);
       })
-      .console.error("리뷰 등록 실패");
+      .catch((err) => {
+        console.log("리뷰 등록 실패", err);
+      });
 
     console.log("name", name);
     console.log("email", email);
   };
+
+  const PrintReviews = reviews.map((review) => {
+    //리뷰 갯수 카운트
+    ratingList[review.rating - 1] += 1;
+    sumRating += review.rating;
+
+    return (
+      <div
+        key={review.review_no}
+        className="single-comment justify-content-between d-flex"
+      >
+        <div className="user justify-content-between d-flex">
+          <div className="thumb text-center">
+            <img src="/assets/imgs/page/avatar-6.jpg" alt="" />
+            <h6>
+              <a href="#">{review.user}</a>
+            </h6>
+          </div>
+          <div className="desc">
+            <div className="product-rate d-inline-block">
+              <div
+                className="product-rating"
+                style={{
+                  width: `${review.rating * 20}%`,
+                }}
+              ></div>
+            </div>
+            <p>{review.review}</p>
+            <div className="d-flex justify-content-between">
+              <div className="d-flex align-items-center">
+                <p className="font-xs mr-30">December 4, 2020 at 3:12 pm</p>
+                <a href="#" className="text-brand btn-reply">
+                  Reply
+                  <i className="fi-rs-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  });
 
   return (
     <>
@@ -304,112 +351,44 @@ const ProductTab = (productId) => {
                 <div className="col-lg-8">
                   <h4 className="mb-30">구매자 리뷰</h4>
                   <div className="comment-list">
-                    <div className="single-comment justify-content-between d-flex">
-                      <div className="user justify-content-between d-flex">
-                        <div className="thumb text-center">
-                          <img src="/assets/imgs/page/avatar-6.jpg" alt="" />
-                          <h6>
-                            <a href="#">Jacky Chan</a>
-                          </h6>
-                          <p className="font-xxs">Since 2012</p>
-                        </div>
-                        <div className="desc">
-                          <div className="product-rate d-inline-block">
-                            <div
-                              className="product-rating"
-                              style={{
-                                width: "90%",
-                              }}
-                            ></div>
-                          </div>
-                          <p>
-                            Thank you very fast shipping from Poland only 3days.
-                          </p>
-                          <div className="d-flex justify-content-between">
-                            <div className="d-flex align-items-center">
-                              <p className="font-xs mr-30">
-                                December 4, 2020 at 3:12 pm
-                              </p>
-                              <a href="#" className="text-brand btn-reply">
-                                Reply
-                                <i className="fi-rs-arrow-right"></i>
-                              </a>
+                    {/* 리뷰 출력 */}
+                    {reviews.map((review) => {
+                      return (
+                        <div
+                          key={review.review_no}
+                          className="single-comment justify-content-between d-flex"
+                        >
+                          <div className="user justify-content-between d-flex">
+                            <div className="thumb text-center">
+                              <img src="/assets/imgs/page/default.png" alt="" />
+                              <h6>
+                                <a href="#">{review.user}</a>
+                              </h6>
+                            </div>
+                            <div className="desc">
+                              <div className="product-rate d-inline-block">
+                                <div
+                                  className="product-rating"
+                                  style={{
+                                    width: `${review.rating * 20}%`,
+                                  }}
+                                ></div>
+                              </div>
+                              <p>{review.review}</p>
+                              <div className="d-flex justify-content-between ml-200">
+                                <div className="d-flex align-items-center">
+                                  <p className="font-xs mr-30"></p>
+                                  <a href="#" className="text-brand btn-reply">
+                                    Reply
+                                    <i className="fi-rs-arrow-right"></i>
+                                  </a>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    <div className="single-comment justify-content-between d-flex">
-                      <div className="user justify-content-between d-flex">
-                        <div className="thumb text-center">
-                          <img src="/assets/imgs/page/avatar-7.jpg" alt="" />
-                          <h6>
-                            <a href="#">Ana Rosie</a>
-                          </h6>
-                          <p className="font-xxs">Since 2008</p>
-                        </div>
-                        <div className="desc">
-                          <div className="product-rate d-inline-block">
-                            <div
-                              className="product-rating"
-                              style={{
-                                width: "90%",
-                              }}
-                            ></div>
-                          </div>
-                          <p>Great low price and works well.</p>
-                          <div className="d-flex justify-content-between">
-                            <div className="d-flex align-items-center">
-                              <p className="font-xs mr-30">
-                                December 4, 2020 at 3:12 pm
-                              </p>
-                              <a href="#" className="text-brand btn-reply">
-                                Reply
-                                <i className="fi-rs-arrow-right"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="single-comment justify-content-between d-flex">
-                      <div className="user justify-content-between d-flex">
-                        <div className="thumb text-center">
-                          <img src="/assets/imgs/page/avatar-8.jpg" alt="" />
-                          <h6>
-                            <a href="#">Steven Keny</a>
-                          </h6>
-                          <p className="font-xxs">Since 2010</p>
-                        </div>
-                        <div className="desc">
-                          <div className="product-rate d-inline-block">
-                            <div
-                              className="product-rating"
-                              style={{
-                                width: "90%",
-                              }}
-                            ></div>
-                          </div>
-                          <p>
-                            Authentic and Beautiful, Love these way more than
-                            ever expected They are Great earphones
-                          </p>
-                          <div className="d-flex justify-content-between">
-                            <div className="d-flex align-items-center">
-                              <p className="font-xs mr-30">
-                                December 4, 2020 at 3:12 pm
-                              </p>
-                              <a href="#" className="text-brand btn-reply">
-                                Reply
-                                <i className="fi-rs-arrow-right"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="col-lg-4">
@@ -419,11 +398,11 @@ const ProductTab = (productId) => {
                       <div
                         className="product-rating"
                         style={{
-                          width: "90%",
+                          width: `${aiRating * 20}%`,
                         }}
                       ></div>
                     </div>
-                    <h6>4.8 out of 5</h6>
+                    <h6>{aiRating.toFixed(1)} out of 5</h6>
                   </div>
 
                   <h4 className="mb-20">Customer reviews</h4>
@@ -432,11 +411,11 @@ const ProductTab = (productId) => {
                       <div
                         className="product-rating"
                         style={{
-                          width: "90%",
+                          width: `${(sumRating / reviews.length) * 20}%`,
                         }}
                       ></div>
                     </div>
-                    <h6>4.8 out of 5</h6>
+                    <h6>{(sumRating / reviews.length).toFixed(1)} out of 5</h6>
                   </div>
                   <div className="progress">
                     <span>5 star</span>
@@ -444,13 +423,14 @@ const ProductTab = (productId) => {
                       className="progress-bar"
                       role="progressbar"
                       style={{
-                        width: " 50%",
+                        width: `${(ratingList[4] / reviews.length) * 100}%`,
                       }}
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      50%
+                      {ratingList[4] / reviews.length !== 0 &&
+                        `${(ratingList[4] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
                   <div className="progress">
@@ -459,13 +439,14 @@ const ProductTab = (productId) => {
                       className="progress-bar"
                       role="progressbar"
                       style={{
-                        width: " 25%",
+                        width: `${(ratingList[3] / reviews.length) * 100}%`,
                       }}
                       aria-valuenow="25"
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      25%
+                      {ratingList[3] / reviews.length !== 0 &&
+                        `${(ratingList[3] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
                   <div className="progress">
@@ -474,13 +455,14 @@ const ProductTab = (productId) => {
                       className="progress-bar"
                       role="progressbar"
                       style={{
-                        width: " 45%",
+                        width: `${(ratingList[2] / reviews.length) * 100}%`,
                       }}
                       aria-valuenow="45"
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      45%
+                      {ratingList[2] / reviews.length !== 0 &&
+                        `${(ratingList[2] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
                   <div className="progress">
@@ -489,13 +471,14 @@ const ProductTab = (productId) => {
                       className="progress-bar"
                       role="progressbar"
                       style={{
-                        width: " 65%",
+                        width: `${(ratingList[1] / reviews.length) * 100}%`,
                       }}
                       aria-valuenow="65"
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      65%
+                      {ratingList[1] / reviews.length !== 0 &&
+                        `${(ratingList[1] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
                   <div className="progress mb-30">
@@ -504,13 +487,14 @@ const ProductTab = (productId) => {
                       className="progress-bar"
                       role="progressbar"
                       style={{
-                        width: " 85%",
+                        width: `${(ratingList[0] / reviews.length) * 100}%`,
                       }}
                       aria-valuenow="85"
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      85%
+                      {ratingList[0] / reviews.length !== 0 &&
+                        `${(ratingList[0] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
                 </div>

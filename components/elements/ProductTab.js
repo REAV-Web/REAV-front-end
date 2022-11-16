@@ -25,9 +25,10 @@ const ProductTab = (props) => {
   let ratingList = [0, 0, 0, 0, 0];
   let sumRating = 0;
 
-  let productID = -1;
+  const productID = parseInt(props.productId);
 
   const fetchReviews = async () => {
+    console.log(productID);
     fetch(
       `http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/review/${productID}`,
       {
@@ -60,7 +61,6 @@ const ProductTab = (props) => {
     //리뷰 데이터 가져오기
     fetchReviews();
     fetchWeight();
-    productID = parseInt(props.productID);
   }, []);
 
   /** 탭 변경 */
@@ -93,48 +93,6 @@ const ProductTab = (props) => {
     console.log("name", name);
     console.log("email", email);
   };
-
-  const PrintReviews = reviews.map((review) => {
-    //리뷰 갯수 카운트
-    ratingList[review.rating - 1] += 1;
-    sumRating += review.rating;
-
-    return (
-      <div
-        key={review.review_no}
-        className="single-comment justify-content-between d-flex"
-      >
-        <div className="user justify-content-between d-flex">
-          <div className="thumb text-center">
-            <img src="/assets/imgs/page/avatar-6.jpg" alt="" />
-            <h6>
-              <a href="#">{review.user}</a>
-            </h6>
-          </div>
-          <div className="desc">
-            <div className="product-rate d-inline-block">
-              <div
-                className="product-rating"
-                style={{
-                  width: `${review.rating * 20}%`,
-                }}
-              ></div>
-            </div>
-            <p>{review.review}</p>
-            <div className="d-flex justify-content-between">
-              <div className="d-flex align-items-center">
-                <p className="font-xs mr-30">December 4, 2020 at 3:12 pm</p>
-                <a href="#" className="text-brand btn-reply">
-                  Reply
-                  <i className="fi-rs-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  });
 
   return (
     <>
@@ -352,43 +310,55 @@ const ProductTab = (props) => {
                   <h4 className="mb-30">구매자 리뷰</h4>
                   <div className="comment-list">
                     {/* 리뷰 출력 */}
-                    {reviews.map((review) => {
-                      return (
-                        <div
-                          key={review.review_no}
-                          className="single-comment justify-content-between d-flex"
-                        >
-                          <div className="user justify-content-between d-flex">
-                            <div className="thumb text-center">
-                              <img src="/assets/imgs/page/default.png" alt="" />
-                              <h6>
-                                <a href="#">{review.user}</a>
-                              </h6>
-                            </div>
-                            <div className="desc">
-                              <div className="product-rate d-inline-block">
-                                <div
-                                  className="product-rating"
-                                  style={{
-                                    width: `${review.rating * 20}%`,
-                                  }}
-                                ></div>
+                    {reviews.length == 0 ? (
+                      <div> 리뷰가 없습니다. </div>
+                    ) : (
+                      reviews.map((review) => {
+                        ratingList[review.rating - 1] += 1;
+                        sumRating += review.rating;
+                        return (
+                          <div
+                            key={review.review_no}
+                            className="single-comment justify-content-between d-flex"
+                          >
+                            <div className="user justify-content-between d-flex">
+                              <div className="thumb text-center">
+                                <img
+                                  src="/assets/imgs/page/default.png"
+                                  alt=""
+                                />
+                                <h6>
+                                  <a href="#">{review.user}</a>
+                                </h6>
                               </div>
-                              <p>{review.review}</p>
-                              <div className="d-flex justify-content-between ml-200">
-                                <div className="d-flex align-items-center">
-                                  <p className="font-xs mr-30"></p>
-                                  <a href="#" className="text-brand btn-reply">
-                                    Reply
-                                    <i className="fi-rs-arrow-right"></i>
-                                  </a>
+                              <div className="desc">
+                                <div className="product-rate d-inline-block">
+                                  <div
+                                    className="product-rating"
+                                    style={{
+                                      width: `${review.rating * 20}%`,
+                                    }}
+                                  ></div>
+                                </div>
+                                <p>{review.review}</p>
+                                <div className="d-flex justify-content-between ml-200">
+                                  <div className="d-flex align-items-center">
+                                    <p className="font-xs mr-30"></p>
+                                    <a
+                                      href="#"
+                                      className="text-brand btn-reply"
+                                    >
+                                      Reply
+                                      <i className="fi-rs-arrow-right"></i>
+                                    </a>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })
+                    )}
                   </div>
                 </div>
                 <div className="col-lg-4">
@@ -402,7 +372,9 @@ const ProductTab = (props) => {
                         }}
                       ></div>
                     </div>
-                    <h6>{aiRating.toFixed(1)} out of 5</h6>
+                    <h6>
+                      {reviews.length !== 0 ? aiRating.toFixed(1) : 0} out of 5
+                    </h6>
                   </div>
 
                   <h4 className="mb-20">Customer reviews</h4>
@@ -411,11 +383,20 @@ const ProductTab = (props) => {
                       <div
                         className="product-rating"
                         style={{
-                          width: `${(sumRating / reviews.length) * 20}%`,
+                          width: `${
+                            reviews.length !== 0
+                              ? (sumRating / reviews.length) * 20
+                              : 0
+                          }%`,
                         }}
                       ></div>
                     </div>
-                    <h6>{(sumRating / reviews.length).toFixed(1)} out of 5</h6>
+                    <h6>
+                      {reviews.length !== 0
+                        ? (sumRating / reviews.length).toFixed(1)
+                        : 0}{" "}
+                      out of 5
+                    </h6>
                   </div>
                   <div className="progress">
                     <span>5 star</span>
@@ -429,7 +410,8 @@ const ProductTab = (props) => {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {ratingList[4] / reviews.length !== 0 &&
+                      {reviews.length !== 0 &&
+                        ratingList[4] / reviews.length !== 0 &&
                         `${(ratingList[4] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
@@ -445,7 +427,8 @@ const ProductTab = (props) => {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {ratingList[3] / reviews.length !== 0 &&
+                      {reviews.length !== 0 &&
+                        ratingList[3] / reviews.length !== 0 &&
                         `${(ratingList[3] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
@@ -461,7 +444,8 @@ const ProductTab = (props) => {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {ratingList[2] / reviews.length !== 0 &&
+                      {reviews.length !== 0 &&
+                        ratingList[2] / reviews.length !== 0 &&
                         `${(ratingList[2] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
@@ -477,7 +461,8 @@ const ProductTab = (props) => {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {ratingList[1] / reviews.length !== 0 &&
+                      {reviews.length !== 0 &&
+                        ratingList[1] / reviews.length !== 0 &&
                         `${(ratingList[1] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>
@@ -493,7 +478,8 @@ const ProductTab = (props) => {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {ratingList[0] / reviews.length !== 0 &&
+                      {reviews.length !== 0 &&
+                        ratingList[0] / reviews.length !== 0 &&
                         `${(ratingList[0] / reviews.length).toFixed(1) * 100}%`}
                     </div>
                   </div>

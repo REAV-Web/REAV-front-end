@@ -76,8 +76,6 @@ const ProductTab = (props) => {
       return;
     }
 
-    console.log("@@@@", name, email, reviewContent, ratingIndex);
-
     axios
       .post(
         `http://reav-env-1.eba-vmtxmc2c.ap-northeast-1.elasticbeanstalk.com/review/${productID}?user=${name}&email=${email}&review=${reviewContent}&rating=${ratingIndex}`
